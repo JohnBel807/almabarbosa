@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { lat: 6.015172339373251, lng: -73.67268633483185, icon: destIcon('🍬','Vélez'), popup: '<strong>Vélez</strong><br>Capital del Bocadillo' },
     { lat: 5.965406565606156, lng: -73.60426349570352, icon: destIcon('🦅','Cite'), popup: '<strong>Cite</strong><br>Primer Municipio de Colombia · ~ 10 min' },
     { lat: 5.871888382101548, lng: -73.57178798453147, icon: destIcon('🍬','Moniquirá'), popup: '<strong>Moniquirá</strong><br>Capital Dulce de Colombia · ~ 10 min' },
-    { lat: 5.63568795998168,  lng: -73.52632907162626, icon: destIcon('🏔️','Villa de Leyva'), popup: '<strong>Villa de Leyva</strong><br>se redactaron las nuevas leyes después de la independencia de 1812 · ~45 min' },
+    { lat: 5.63568795998168,  lng: -73.52632907162626, icon: destIcon('🏔️','Villa de Leyva'), popup: '<strong>Villa de Leyva</strong><br>se redactaron las nuevas leyes después de la independencia de 1812 · ~110 min' },
     { lat: 5.621255925247244, lng: -73.81671735484137, icon: destIcon('🍬','Chiquinquirá'), popup: '<strong>Chiquinquirá</strong><br>Basílica de Nuestra Señora del Rosario de Chiquinquirá · ~100 min' },
     { lat: 6.015172339373251, lng: -73.67268633483185, icon: destIcon('💧','Puente Nacional'), popup: '<strong>Puente Nacional</strong><br>Puente Nacional · ~10 min ' }
   ];
