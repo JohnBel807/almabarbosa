@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const places = [
-    { lat: 6.1833, lng: -73.6167, icon: barbosaIcon, popup: '<strong style="color:#c9a84c">♥ Barbosa</strong><br>Tu base de operaciones', main: true },
-    { lat: 6.1000, lng: -73.7500, icon: destIcon('💧','Suaita'), popup: '<strong>Cascadas de San José</strong><br>Suaita · ~45 min' },
-    { lat: 6.2800, lng: -73.5500, icon: destIcon('🌀','La Paz'), popup: '<strong>El Hoyo del Aire</strong><br>La Paz · ~35 min' },
-    { lat: 6.0500, lng: -73.8000, icon: destIcon('🏔️','Florián'), popup: '<strong>Ventanas de Tisquizoque</strong><br>Florián · ~55 min' },
-    { lat: 6.3500, lng: -73.5000, icon: destIcon('🦅','El Peñón'), popup: '<strong>Bosque de Piedra</strong><br>El Peñón · ~1h' },
-    { lat: 6.0333, lng: -73.6667, icon: destIcon('🍬','Vélez'), popup: '<strong>Vélez</strong><br>Capital del Bocadillo' },
+    { lat: 5.934299471956952, lng: -73.611280677134, icon: barbosaIcon, popup: '<strong style="color:#c9a84c">♥ Barbosa</strong><br>Tu base de operaciones', main: true },
+    { lat: 6.101657585638258, lng: -73.44097421554945, icon: destIcon('💧','Suaita'), popup: '<strong>Cascadas de San José</strong><br>Suaita · ~45 min' },
+    { lat: 6.178113787625631, lng: -73.5885492522133, icon: destIcon('🌀','La Paz'), popup: '<strong>El Hoyo del Aire</strong><br>La Paz · ~1:35 min' },
+    { lat: 5.80371276229806,  lng: -73.96953947126595, icon: destIcon('🏔️','Florián'), popup: '<strong>Ventanas de Tisquizoque</strong><br>Florián · ~2:00 min' },
+    { lat: 6.055333396868314, lng: -73.81402371730104, icon: destIcon('🦅','El Peñón'), popup: '<strong>Bosque de Piedra</strong><br>El Peñón · ~2h' },
+    { lat: 6.015172339373251, lng: -73.67268633483185, icon: destIcon('🍬','Vélez'), popup: '<strong>Vélez</strong><br>Capital del Bocadillo' },
   ];
 
   places.forEach(p => {
