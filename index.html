@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbosa – El Corazón Late Fuerte en el Sur de Santander</title>
+  <meta name="description" content="Barbosa: epicentro logístico, gastronómico y hotelero para explorar las maravillas naturales de la provincia de Vélez y el sur de Santander.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <span class="logo-heart">♥</span> Barbosa
+    </a>
+    <ul class="nav-links">
+      <li><a href="#epicentro">El Epicentro</a></li>
+      <li><a href="#rutas">Rutas</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="nav-lang">
+      <button class="lang-btn active" onclick="setLang('es')">ES</button>
+      <span>|</span>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-video-bg">
+    <img class="hero-bg-img" src="img/river-valley.jpg" alt="Cañón del río Suárez — Barbosa, Santander" />
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge" data-es="Sur de Santander · Colombia" data-en="South Santander · Colombia">Sur de Santander · Colombia</div>
+    <h1 class="hero-title">
+      <span data-es="Donde la Selva" data-en="Where the Jungle">Donde la Selva</span><br>
+      <em data-es="te llama por tu nombre" data-en="calls you by name">te llama por tu nombre</em>
+    </h1>
+    <p class="hero-sub" data-es="En Barbosa descansas como en casa y comes como un rey — mientras el cañón, las cascadas y los abismos místicos te esperan a minutos de tu hotel." data-en="In Barbosa you rest like home and eat like a king — while the canyon, waterfalls and mystical abysses await you minutes from your hotel.">
+      En Barbosa descansas como en casa y comes como un rey — mientras el cañón, las cascadas y los abismos místicos te esperan a minutos de tu hotel.
+    </p>
+    <div class="hero-ctas">
+      <a href="#rutas" class="btn btn-primary" data-es="Empieza tu aventura hoy" data-en="Start your adventure today">Empieza tu aventura hoy</a>
+      <a href="#contacto" class="btn btn-ghost" data-es="Reserva tu guía" data-en="Book your guide">Reserva tu guía</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>7+</strong><span data-es="Destinos naturales" data-en="Natural destinations">Destinos naturales</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>3h</strong><span data-es="Desde Bogotá" data-en="From Bogotá">Desde Bogotá</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>∞</strong><span data-es="Aventuras posibles" data-en="Possible adventures">Aventuras posibles</span></div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span data-es="Descubre más" data-en="Discover more">Descubre más</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ========== EPICENTRO ========== -->
+<section class="section epicentro" id="epicentro">
+  <div class="epicentro-label" data-es="La Propuesta de Valor" data-en="The Value Proposition">La Propuesta de Valor</div>
+  <div class="container">
+    <div class="epicentro-grid">
+      <div class="epicentro-text">
+        <h2 data-es="Barbosa: El Hub Perfecto" data-en="Barbosa: The Perfect Hub">Barbosa: <em>El Hub Perfecto</em></h2>
+        <p data-es="No todos los destinos tienen la infraestructura para ser el punto de partida ideal. Barbosa sí. Aquí confluyen carreteras, hoteles boutique, restaurantes con sazón de abuela y una energía que sólo el sur de Santander puede ofrecer." data-en="Not every destination has the infrastructure to be the ideal starting point. Barbosa does. Here converge roads, boutique hotels, restaurants with grandmother's touch, and an energy only South Santander can offer.">
+          No todos los destinos tienen la infraestructura para ser el punto de partida ideal. Barbosa sí. Aquí confluyen carreteras, hoteles boutique, restaurantes con sazón de abuela y una energía que sólo el sur de Santander puede ofrecer.
+        </p>
+        <div class="value-cards">
+          <div class="value-card">
+            <span class="vc-icon">🏨</span>
+            <div>
+              <strong data-es="Alojamiento Superior" data-en="Superior Lodging">Alojamiento Superior</strong>
+              <p data-es="Hoteles y posadas con comodidades modernas — tu refugio antes y después de cada aventura." data-en="Hotels and guesthouses with modern amenities — your refuge before and after each adventure.">Hoteles y posadas con comodidades modernas — tu refugio antes y después de cada aventura.</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <span class="vc-icon">🍽️</span>
+            <div>
+              <strong data-es="Gastronomía de Altura" data-en="Elevated Gastronomy">Gastronomía de Altura</strong>
+              <p data-es="El mejor piquete veleño, el auténtico bocadillo con queso, mondongo, chicha y hasta cocina internacional. Aquí el sabor es paisaje." data-en="The finest piquete veleño, authentic bocadillo with cheese, mondongo, chicha, and even international cuisine. Here, flavor is landscape.">El mejor piquete veleño, el auténtico bocadillo con queso, mondongo, chicha y hasta cocina internacional. Aquí el sabor es paisaje.</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <span class="vc-icon">🗺️</span>
+            <div>
+              <strong data-es="Conexión Estratégica" data-en="Strategic Connection">Conexión Estratégica</strong>
+              <p data-es="A menos de 1h de Suaita, La Paz, Florián y El Peñón. Barbosa es tu centro de operaciones." data-en="Less than 1h from Suaita, La Paz, Florián and El Peñón. Barbosa is your operations center.">A menos de 1h de Suaita, La Paz, Florián y El Peñón. Barbosa es tu centro de operaciones.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="epicentro-map-wrapper">
+        <div class="hub-visual">
+          <div class="hub-center">
+            <span class="hub-heart">♥</span>
+            <strong>Barbosa</strong>
+          </div>
+          <div class="hub-spoke" style="--angle:0deg;--dist:110px"><span>Suaita</span></div>
+          <div class="hub-spoke" style="--angle:72deg;--dist:110px"><span>La Paz</span></div>
+          <div class="hub-spoke" style="--angle:144deg;--dist:110px"><span>Florián</span></div>
+          <div class="hub-spoke" style="--angle:216deg;--dist:110px"><span>El Peñón</span></div>
+          <div class="hub-spoke" style="--angle:288deg;--dist:110px"><span>Vélez</span></div>
+          <svg class="hub-lines" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            <line x1="150" y1="150" x2="150" y2="40" />
+            <line x1="150" y1="150" x2="254" y2="185" />
+            <line x1="150" y1="150" x2="210" y2="274" />
+            <line x1="150" y1="150" x2="90" y2="274" />
+            <line x1="150" y1="150" x2="46" y2="185" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== RUTAS DE AVENTURA ========== -->
+<section class="section rutas" id="rutas">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Explora la región" data-en="Explore the region">Explora la región</span>
+      <h2 data-es="Rutas que Quitan el Aliento" data-en="Breathtaking Routes">Rutas que <em>Quitan el Aliento</em></h2>
+      <p data-es="Cada destino es un mundo. Barbosa es la puerta." data-en="Every destination is a world. Barbosa is the door.">Cada destino es un mundo. Barbosa es la puerta.</p>
+    </div>
+    <div class="rutas-grid">
+
+      <div class="ruta-card" data-tilt>
+        <div class="ruta-img" style="background-image:url('img/cascadas_san_jose.jpg');">
+          <div class="ruta-badge" data-es="~45 min desde Barbosa" data-en="~45 min from Barbosa">~45 min desde Barbosa</div>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-icon">💧</div>
+          <h3 data-es="Cascadas de San José" data-en="San José Waterfalls">Cascadas de San José</h3>
+          <p class="ruta-lugar">Suaita</p>
+          <p data-es="El agua desciende en cortinas de encaje sobre la roca negra. Las Cascadas de San José no son sólo un espectáculo — son un ritual de pureza que sólo la selva santandereana puede ofrecer. El velo más hermoso de la naturaleza te espera." data-en="Water descends in lace curtains over black rock. The San José Waterfalls are not just a spectacle — they are a purity ritual only the Santanderian jungle can offer. Nature's most beautiful veil awaits you.">
+            El agua desciende en cortinas de encaje sobre la roca negra. Las Cascadas de San José no son sólo un espectáculo — son un ritual de pureza que sólo la selva santandereana puede ofrecer. El velo más hermoso de la naturaleza te espera.
+          </p>
+          <div class="ruta-tags">
+            <span data-es="Senderismo" data-en="Hiking">Senderismo</span>
+            <span data-es="Fotografía" data-en="Photography">Fotografía</span>
+            <span data-es="Baño natural" data-en="Natural bath">Baño natural</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ruta-card" data-tilt>
+        <div class="ruta-img" style="background-image:url('img/hoyo_del_aire.jpg');">
+          <div class="ruta-badge" data-es="~35 min desde Barbosa" data-en="~35 min from Barbosa">~35 min desde Barbosa</div>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-icon">🌀</div>
+          <h3 data-es="El Hoyo del Aire" data-en="El Hoyo del Aire">El Hoyo del Aire</h3>
+          <p class="ruta-lugar">La Paz</p>
+          <p data-es="Un abismo que respira. El Hoyo del Aire es una formación geológica que desafía los sentidos — un portal entre el mundo que conoces y el que la montaña guarda en silencio. Para los valientes, el misticismo más puro de la región." data-en="An abyss that breathes. El Hoyo del Aire is a geological formation that challenges the senses — a portal between the world you know and the one the mountain keeps in silence. For the brave, the region's purest mysticism.">
+            Un abismo que respira. El Hoyo del Aire es una formación geológica que desafía los sentidos — un portal entre el mundo que conoces y el que la montaña guarda en silencio. Para los valientes, el misticismo más puro de la región.
+          </p>
+          <div class="ruta-tags">
+            <span data-es="Espeleología" data-en="Caving">Espeleología</span>
+            <span data-es="Aventura extrema" data-en="Extreme adventure">Aventura extrema</span>
+            <span data-es="Geología" data-en="Geology">Geología</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ruta-card" data-tilt>
+        <div class="ruta-img" style="background-image:url('img/ventanas_florian.webp');">
+          <div class="ruta-badge" data-es="~55 min desde Barbosa" data-en="~55 min from Barbosa">~55 min desde Barbosa</div>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-icon">🏔️</div>
+          <h3 data-es="Ventanas de Tisquizoque" data-en="Tisquizoque Windows">Ventanas de Tisquizoque</h3>
+          <p class="ruta-lugar">Florián</p>
+          <p data-es="Donde el río sale de la montaña como un secreto que ya no puede callar. Las Ventanas de Tisquizoque son túneles naturales tallados por el agua durante milenios — arcos de piedra por donde la luz y el agua danzan en armonía perfecta." data-en="Where the river exits the mountain like a secret it can no longer keep. The Tisquizoque Windows are natural tunnels carved by water over millennia — stone arches where light and water dance in perfect harmony.">
+            Donde el río sale de la montaña como un secreto que ya no puede callar. Las Ventanas de Tisquizoque son túneles naturales tallados por el agua durante milenios — arcos de piedra por donde la luz y el agua danzan en armonía perfecta.
+          </p>
+          <div class="ruta-tags">
+            <span data-es="Kayak" data-en="Kayak">Kayak</span>
+            <span data-es="Tubing" data-en="Tubing">Tubing</span>
+            <span data-es="Senderismo" data-en="Hiking">Senderismo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ruta-card" data-tilt>
+        <div class="ruta-img" style="background-image:url('img/cavernas_el_peñon.jpg');">
+          <div class="ruta-badge" data-es="~1h desde Barbosa" data-en="~1h from Barbosa">~1h desde Barbosa</div>
+        </div>
+        <div class="ruta-body">
+          <div class="ruta-icon">🦅</div>
+          <h3 data-es="Bosque de Piedra" data-en="Stone Forest">Cueas y Cavernas en el Peñon</h3>
+          <p class="ruta-lugar">El Peñón</p>
+          <p data-es="Un bosque esculpido por dioses de piedra. El Peñón es el paraíso del avistamiento de aves endémicas y el hogar de formaciones rocosas que parecen esculpidas por titanes. Una sinfonía visual donde el silencio habla más fuerte que cualquier guía." data-en="A forest sculpted by stone gods. El Peñón is the paradise for endemic birdwatching and home to rock formations that appear carved by titans. A visual symphony where silence speaks louder than any guide.">
+            Un bosque esculpido por dioses de piedra. El Peñón es el paraíso del avistamiento de aves endémicas y el hogar de formaciones rocosas que parecen esculpidas por titanes. Una sinfonía visual donde el silencio habla más fuerte que cualquier guía.
+          </p>
+          <div class="ruta-tags">
+            <span data-es="Avistamiento aves" data-en="Birdwatching">Avistamiento aves</span>
+            <span data-es="Escalada" data-en="Climbing">Escalada</span>
+            <span data-es="Camping" data-en="Camping">Camping</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAUNA & WILDLIFE GALLERY ========== -->
+<section class="section fauna-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Vida Silvestre" data-en="Wildlife">Vida Silvestre</span>
+      <h2 data-es="La Naturaleza que Habita Aquí" data-en="The Nature that Lives Here">La Naturaleza que <em>Habita Aquí</em></h2>
+      <p data-es="Cada rincón de la provincia de Vélez es un santuario. Estas son las criaturas que comparten el territorio contigo." data-en="Every corner of the Vélez province is a sanctuary. These are the creatures that share the territory with you.">Cada rincón de la provincia de Vélez es un santuario. Estas son las criaturas que comparten el territorio contigo.</p>
+    </div>
+    <div class="fauna-grid">
+      <div class="fauna-card fauna-lg">
+        <img src="img/bird-vermilion.png" alt="Atrapamoscas Bermellón — Pyrocephalus rubinus" loading="lazy" />
+        <div class="fauna-label">
+          <strong data-es="Atrapamoscas Bermellón" data-en="Vermilion Flycatcher">Atrapamoscas Bermellón</strong>
+          <span><em>Pyrocephalus rubinus</em></span>
+        </div>
+      </div>
+      <div class="fauna-card">
+        <img src="img/bird-sparrow.png" alt="Copetón — Zonotrichia capensis" loading="lazy" />
+        <div class="fauna-label">
+          <strong data-es="Copetón Andino" data-en="Andean Sparrow">Copetón Andino</strong>
+          <span><em>Zonotrichia capensis</em></span>
+        </div>
+      </div>
+      <div class="fauna-card">
+        <img src="img/squirrel.png" alt="Ardilla colorada — Sciurus granatensis" loading="lazy" />
+        <div class="fauna-label">
+          <strong data-es="Ardilla Colorada" data-en="Red Squirrel">Ardilla Colorada</strong>
+          <span><em>Sciurus granatensis</em></span>
+        </div>
+      </div>
+      <div class="fauna-card fauna-lg">
+        <img src="img/bird-woodpecker.png" alt="Carpintero Real en vuelo" loading="lazy" />
+        <div class="fauna-label">
+          <strong data-es="Carpintero Real" data-en="Pileated Woodpecker">Carpintero Real</strong>
+          <span><em>Dryocopus pileatus</em></span>
+        </div>
+      </div>
+    </div>
+    <p class="fauna-note" data-es="📸 Fotografías tomadas en la provincia de Vélez por observadores locales certificados." data-en="📸 Photos taken in the Vélez province by certified local observers.">📸 Fotografías tomadas en la provincia de Vélez por observadores locales certificados.</p>
+  </div>
+</section>
+
+<!-- ========== EXPERIENCIA LOCAL ========== -->
+<section class="section experiencia" id="experiencia">
+  <div class="experiencia-bg"></div>
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag" data-es="Vivir Barbosa" data-en="Living Barbosa">Vivir Barbosa</span>
+      <h2 data-es="La Experiencia Local" data-en="The Local Experience">La <em>Experiencia Local</em></h2>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card exp-featured" style="background-image:url('img/culture-woman.jpg');">
+        <div class="exp-card-inner exp-photo-overlay">
+          <span class="exp-num">01</span>
+          <h3 data-es="Cultura Viva" data-en="Living Culture">Cultura Viva</h3>
+          <p data-es="Las tradiciones del sur de Santander se llevan en la piel. La chicha artesanal en calabazo, el sombrero vueltiao y las manos que guardan la memoria de generaciones — Barbosa es cultura que se puede tocar." data-en="The traditions of South Santander are worn on the skin. Artisan chicha in a gourd, the vueltiao hat, and hands that hold the memory of generations — Barbosa is culture you can touch.">
+            Las tradiciones del sur de Santander se llevan en la piel. La chicha artesanal en calabazo, el sombrero vueltiao y las manos que guardan la memoria de generaciones — Barbosa es cultura que se puede tocar.
+          </p>
+        </div>
+      </div>
+      <div class="exp-card exp-photo-card">
+        <img src="img/bird-sparrow.png" alt="Llama en Barbosa Santander" loading="lazy" />
+        <div class="exp-card-inner">
+          <span class="exp-num">02</span>
+          <h3 data-es="Fauna Doméstica" data-en="Farm Animals">Fauna Doméstica</h3>
+          <p data-es="Del altiplano a la plaza, la llama se ha convertido en símbolo del carácter único de Barbosa — un guiño andino en el corazón santandereano." data-en="From the highlands to the square, the llama has become a symbol of Barbosa's unique character — an Andean wink in the heart of Santander.">
+            Del altiplano a la plaza, el Copetón Andino se ha convertido en símbolo del carácter único de Barbosa.
+          </p>
+        </div>
+      </div>
+      <div class="exp-card exp-photo-card">
+        <img src="img/IGLESIAPUENTENAL2023.jpg" alt="Iglesia colonial en la región" loading="lazy" />
+        <div class="exp-card-inner">
+          <span class="exp-num">03</span>
+          <h3 data-es="Pueblos & Plazas" data-en="Towns & Squares">Pueblos & Plazas</h3>
+          <p data-es="Iglesias de ladrillo rojo, plazas empedradas y moteros que exploran el territorio — la aventura tiene muchas formas en el sur de Santander." data-en="Red brick churches, cobblestone squares and motorcyclists exploring the territory — adventure takes many forms in South Santander.">
+            Iglesias de ladrillo rojo, plazas empedradas y el espíritu aventurero que recorre cada camino de la región.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TOURS ECOLÓGICOS ========== -->
+<section class="section tours" id="tours">
+  <div class="container">
+    <div class="tours-inner">
+      <div class="tours-badge">🌿</div>
+      <h2 data-es="Turismo Que Cuida la Tierra" data-en="Tourism That Cares for the Earth">Turismo Que <em>Cuida la Tierra</em></h2>
+      <p data-es="Todos nuestros tours son operados por guías locales certificados por el Ministerio de Comercio, Industria y Turismo de Colombia. Creemos en el turismo sostenible como motor de desarrollo para las comunidades rurales de la provincia de Vélez." data-en="All our tours are operated by local guides certified by Colombia's Ministry of Commerce, Industry and Tourism. We believe in sustainable tourism as a development engine for rural communities in the Vélez province.">
+        Todos nuestros tours son operados por guías locales certificados por el Ministerio de Comercio, Industria y Turismo de Colombia. Creemos en el turismo sostenible como motor de desarrollo para las comunidades rurales de la provincia de Vélez.
+      </p>
+      <div class="tours-features">
+        <div class="tf">
+          <span>🏅</span>
+          <p data-es="Guías certificados" data-en="Certified guides">Guías certificados</p>
+        </div>
+        <div class="tf">
+          <span>♻️</span>
+          <p data-es="Impacto mínimo" data-en="Minimal impact">Impacto mínimo</p>
+        </div>
+        <div class="tf">
+          <span>🌾</span>
+          <p data-es="Comunidad local" data-en="Local community">Comunidad local</p>
+        </div>
+        <div class="tf">
+          <span>📋</span>
+          <p data-es="Rutas trazadas" data-en="Mapped routes">Rutas trazadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERÍA FOTOGRÁFICA ========== -->
+<section class="section galeria-section" id="galeria">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Imágenes auténticas" data-en="Authentic images">Imágenes auténticas</span>
+      <h2 data-es="Barbosa en Imágenes" data-en="Barbosa in Images">Barbosa <em>en Imágenes</em></h2>
+    </div>
+    <div class="galeria-masonry">
+      <div class="gal-item gal-tall">
+        <img src="img/llama-fountain.jpg" alt="Llama junto a la fuente de Barbosa" loading="lazy" />
+        <div class="gal-caption" data-es="La llama de la plaza — ícono de Barbosa" data-en="The square llama — Barbosa's icon">La llama de la plaza — ícono de Barbosa</div>
+      </div>
+      <div class="gal-item">
+        <img src="img/bird-vermilion.png" alt="Atrapamoscas Bermellón en Vélez" loading="lazy" />
+        <div class="gal-caption" data-es="Atrapamoscas Bermellón" data-en="Vermilion Flycatcher">Atrapamoscas Bermellón</div>
+      </div>
+      <div class="gal-item">
+        <img src="img/landscape-canyon.jpg" alt="Cañón del río Suárez — Barbosa Santander" loading="lazy" />
+        <div class="gal-caption" data-es="Cañón del río Suárez al atardecer" data-en="Suárez River canyon at dusk">Cañón del río Suárez al atardecer</div>
+      </div>
+      <div class="gal-item gal-wide">
+        <img src="img/squirrel.png" alt="Ardilla colorada en la región de Vélez" loading="lazy" />
+        <div class="gal-caption" data-es="Ardilla colorada — agilidad pura" data-en="Red squirrel — pure agility">Ardilla colorada — agilidad pura</div>
+      </div>
+      <div class="gal-item gal-tall">
+        <img src="img/church-moto.jpg" alt="Iglesia colonial y moto — Sur de Santander" loading="lazy" />
+        <div class="gal-caption" data-es="Patrimonio & aventura en una sola imagen" data-en="Heritage & adventure in one image">Patrimonio & aventura en una sola imagen</div>
+      </div>
+      <div class="gal-item">
+        <img src="img/llama-closeup.jpg" alt="Llama en primer plano — Barbosa" loading="lazy" />
+        <div class="gal-caption" data-es="De cerca y sin filtros" data-en="Up close and unfiltered">De cerca y sin filtros</div>
+      </div>
+      <div class="gal-item gal-wide">
+        <img src="img/culture-woman.jpg" alt="Cultura tradicional — mujer con chicha artesanal" loading="lazy" />
+        <div class="gal-caption" data-es="Saberes ancestrales que no se olvidan" data-en="Ancestral knowledge that is never forgotten">Saberes ancestrales que no se olvidan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MAPA INTERACTIVO ========== -->
+<section class="section mapa-section" id="mapa">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Tu punto de partida" data-en="Your starting point">Tu punto de partida</span>
+      <h2 data-es="Barbosa en el Centro de Todo" data-en="Barbosa at the Center of Everything">Barbosa en el <em>Centro de Todo</em></h2>
+    </div>
+    <div id="map" class="leaflet-map"></div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIOS ========== -->
+<section class="section testimonios" id="testimonios">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-es="Voces reales" data-en="Real voices">Voces reales</span>
+      <h2 data-es="Lo que dicen los viajeros" data-en="What Travelers Say">Lo que dicen <em>los viajeros</em></h2>
+    </div>
+    <div class="testimonios-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p data-es='"Nunca imaginé que a 3 horas de Bogotá existiera un lugar así. Las cascadas de Suaita me dejaron sin palabras y la cena en Barbosa fue la mejor del viaje."' data-en='"I never imagined a place like this existed 3 hours from Bogotá. The Suaita waterfalls left me speechless and dinner in Barbosa was the best of the trip."'>"Nunca imaginé que a 3 horas de Bogotá existiera un lugar así. Las cascadas de Suaita me dejaron sin palabras y la cena en Barbosa fue la mejor del viaje."</p>
+        <div class="testi-author"><strong>Laura M.</strong> <span>— Bogotá</span></div>
+      </div>
+      <div class="testi-card testi-featured">
+        <div class="testi-stars">★★★★★</div>
+        <p data-es='"El Hoyo del Aire fue la experiencia más sobrecogedora de mi vida. Nuestro guía local conoce cada piedra. Barbosa: el mejor secreto de Colombia."' data-en='"El Hoyo del Aire was the most overwhelming experience of my life. Our local guide knows every stone. Barbosa: Colombia\'s best secret."'>"El Hoyo del Aire fue la experiencia más sobrecogedora de mi vida. Nuestro guía local conoce cada piedra. Barbosa: el mejor secreto de Colombia."</p>
+        <div class="testi-author"><strong>Carlos & Ana P.</strong> <span>— Medellín</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p data-es='"As an international traveler, Barbosa exceeded all expectations. The piquete veleño alone is worth the trip!"' data-en='"As an international traveler, Barbosa exceeded all expectations. The piquete veleño alone is worth the trip!"'>"As an international traveler, Barbosa exceeded all expectations. The piquete veleño alone is worth the trip!"</p>
+        <div class="testi-author"><strong>James T.</strong> <span>— New York, USA</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTO / FORMULARIO ========== -->
+<section class="section contacto" id="contacto">
+  <div class="container">
+    <div class="contacto-grid">
+      <div class="contacto-info">
+        <span class="section-tag" data-es="Únete a la aventura" data-en="Join the adventure">Únete a la aventura</span>
+        <h2 data-es="Recibe información personalizada" data-en="Receive personalized information">Recibe información <em>personalizada</em></h2>
+        <p data-es="Déjanos tus datos y un guía certificado te contactará con las mejores opciones para tu viaje a la provincia de Vélez." data-en="Leave us your details and a certified guide will contact you with the best options for your trip to the Vélez province.">
+          Déjanos tus datos y un guía certificado te contactará con las mejores opciones para tu viaje a la provincia de Vélez.
+        </p>
+        <div class="contacto-icons">
+          <div><span>📍</span> <p>Barbosa, Santander, Colombia</p></div>
+          <div><span>📧</span> <p>info@barbosacorazon.co</p></div>
+          <div><span>📞</span> <p>+57 310 000 0000</p></div>
+        </div>
+      </div>
+      <div class="contacto-form-wrap">
+        <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre" data-es="Nombre completo *" data-en="Full name *">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label for="correo" data-es="Correo electrónico *" data-en="Email address *">Correo electrónico *</label>
+              <input type="email" id="correo" name="correo" required placeholder="tucorreo@email.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telefono" data-es="Teléfono / WhatsApp *" data-en="Phone / WhatsApp *">Teléfono / WhatsApp *</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="+57 300 000 0000" />
+            </div>
+            <div class="form-group">
+              <label data-es="Intereses (selecciona varios)" data-en="Interests (select multiple)">Intereses</label>
+              <div class="interest-tags" id="interestTags">
+                <span class="itag" onclick="toggleInterest(this)" data-value="cascadas">💧 Cascadas</span>
+                <span class="itag" onclick="toggleInterest(this)" data-value="cuevas">🕳️ Cuevas</span>
+                <span class="itag" onclick="toggleInterest(this)" data-value="gastronomia">🍽️ Gastronomía</span>
+                <span class="itag" onclick="toggleInterest(this)" data-value="aves">🦅 Aves</span>
+                <span class="itag" onclick="toggleInterest(this)" data-value="festival">🎭 Festival</span>
+                <span class="itag" onclick="toggleInterest(this)" data-value="espeleologia">⛏️ Espeleología</span>
+              </div>
+              <input type="hidden" id="intereses" name="intereses" />
+            </div>
+          </div>
+
+          <!-- HABEAS DATA COLOMBIANO -->
+          <div class="habeas-data">
+            <div class="hd-box">
+              <h4>📋 Autorización de Tratamiento de Datos Personales</h4>
+              <p>De conformidad con la <strong>Ley 1581 de 2012</strong> (Ley de Protección de Datos Personales de Colombia) y el <strong>Decreto 1377 de 2013</strong>, al marcar la casilla de abajo usted autoriza a <strong>Barbosa Corazón Turístico</strong> (en adelante "el Responsable") a recopilar, almacenar, usar, circular y suprimir sus datos personales (nombre, correo, teléfono e intereses) con la finalidad exclusiva de enviarle información turística personalizada, novedades de la región y propuestas de servicios. Sus datos <strong>no serán vendidos, cedidos ni compartidos</strong> con terceros sin su consentimiento previo. Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento escribiendo a <em>datos@barbosacorazon.co</em>.</p>
+            </div>
+            <label class="hd-check">
+              <input type="checkbox" id="habeasData" name="habeasData" required />
+              <span data-es="Acepto el tratamiento de mis datos personales conforme a la Ley 1581 de 2012 *" data-en="I accept the processing of my personal data in accordance with Colombian Law 1581 of 2012 *">
+                Acepto el tratamiento de mis datos personales conforme a la Ley 1581 de 2012 *
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full" data-es="Enviar y empezar mi aventura" data-en="Send and start my adventure">Enviar y empezar mi aventura</button>
+          <div id="formMsg" class="form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-heart">♥</span>
+      <strong>Barbosa</strong>
+      <p data-es="El Corazón Late Fuerte en el Sur de Santander" data-en="The Heart Beats Strong in South Santander">El Corazón Late Fuerte en el Sur de Santander</p>
+    </div>
+    <div class="footer-links">
+      <a href="#epicentro">El Epicentro</a>
+      <a href="#rutas">Rutas</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#tours">Tours Ecológicos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Barbosa Corazón Turístico · <a href="#">Política de Privacidad</a> · Hecho con ♥ en Santander, Colombia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== WHATSAPP BUTTON ========== -->
+<a href="https://wa.me/573100000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20el%20turismo%20en%20Barbosa%20Santander" 
+   class="whatsapp-btn" target="_blank" rel="noopener" title="Chatea por WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2.7A13.27 13.27 0 0 0 2.73 16a13.1 13.1 0 0 0 1.77 6.6L2.7 29.3l6.9-1.77A13.27 13.27 0 1 0 16 2.7zm0 24.4a11.13 11.13 0 0 1-5.67-1.55l-.4-.24-4.1 1.05 1.08-3.96-.26-.41A11.16 11.16 0 1 1 16 27.1z"/><path d="M22.4 19.1c-.33-.17-1.96-.97-2.26-1.08s-.52-.17-.74.17-.85 1.08-1.04 1.3-.38.26-.7.09a8.86 8.86 0 0 1-2.6-1.6 9.73 9.73 0 0 1-1.8-2.24c-.19-.33 0-.5.14-.67s.33-.38.5-.57a2.22 2.22 0 0 0 .33-.55.61.61 0 0 0 0-.58c-.09-.17-.74-1.79-1.02-2.45s-.54-.55-.74-.56h-.63a1.21 1.21 0 0 0-.88.41 3.7 3.7 0 0 0-1.15 2.75 6.42 6.42 0 0 0 1.35 3.41c.17.22 2.36 3.6 5.72 5.05a19.35 19.35 0 0 0 1.91.7 4.6 4.6 0 0 0 2.11.13c.64-.1 1.96-.8 2.24-1.58a2.77 2.77 0 0 0 .19-1.58c-.08-.14-.3-.22-.63-.39z"/></svg>
+  <span data-es="¿Hablamos?" data-en="Let's talk?">¿Hablamos?</span>
+</a>
+
+<!-- ========== CHATBOT ========== -->
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chatbot-header" onclick="toggleChat()">
+    <span>💬</span>
+    <span data-es="Asistente Virtual" data-en="Virtual Assistant">Asistente Virtual</span>
+    <span class="chat-close" id="chatToggle">▲</span>
+  </div>
+  <div class="chatbot-body" id="chatBody">
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-msg bot">
+        <div class="chat-bubble" data-es="¡Hola! 👋 Soy tu guía virtual de Barbosa. ¿Sobre qué quieres saber? Puedes preguntar sobre rutas, gastronomía, alojamiento o el Festival del Río." data-en="Hello! 👋 I'm your virtual Barbosa guide. What would you like to know? You can ask about routes, gastronomy, lodging or the River Festival.">
+          ¡Hola! 👋 Soy tu guía virtual de Barbosa. ¿Sobre qué quieres saber? Puedes preguntar sobre rutas, gastronomía, alojamiento o el Festival del Río.
+        </div>
+      </div>
+    </div>
+    <div class="chat-quick-replies" id="quickReplies">
+      <button onclick="sendQuick('¿Cómo llego a Barbosa?')">🚗 Cómo llegar</button>
+      <button onclick="sendQuick('¿Qué rutas recomiendas?')">🗺️ Rutas</button>
+      <button onclick="sendQuick('¿Dónde hospedarse?')">🏨 Hoteles</button>
+      <button onclick="sendQuick('¿Qué comer en Barbosa?')">🍽️ Gastronomía</button>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter') sendChat()" />
+      <button onclick="sendChat()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
