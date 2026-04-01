@@ -38,7 +38,7 @@
 <!-- ========== HERO ========== -->
 <section class="hero" id="hero">
   <div class="hero-video-bg">
-    <img class="hero-bg-img" src="img/river-valley.jpg" alt="Cañón del río Suárez — Barbosa, Santander" />
+    <img class="hero-bg-img" src="img/hoyo_del_aire.jpg" alt="Cañón del río Suárez — Barbosa, Santander" />
     <div class="hero-overlay"></div>
     <div class="hero-particles" id="particles"></div>
   </div>
@@ -63,10 +63,10 @@
       <div class="stat"><strong>∞</strong><span data-es="Aventuras posibles" data-en="Possible adventures">Aventuras posibles</span></div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    <span data-es="Descubre más" data-en="Discover more">Descubre más</span>
-    <div class="scroll-arrow"></div>
-  </div>
+  <!-- div class="hero-scroll-hint"-->
+    <!-- span data-es="Descubre más" data-en="Discover more">Descubre más</span-->
+    <!-- div class="scroll-arrow"></div-->
+  <!-- /div-->
 </section>
 
 <!-- ========== EPICENTRO ========== -->
@@ -109,18 +109,32 @@
             <span class="hub-heart">♥</span>
             <strong>Barbosa</strong>
           </div>
-          <div class="hub-spoke" style="--angle:0deg;--dist:110px"><span>Suaita</span></div>
-          <div class="hub-spoke" style="--angle:72deg;--dist:110px"><span>La Paz</span></div>
-          <div class="hub-spoke" style="--angle:144deg;--dist:110px"><span>Florián</span></div>
-          <div class="hub-spoke" style="--angle:216deg;--dist:110px"><span>El Peñón</span></div>
-          <div class="hub-spoke" style="--angle:288deg;--dist:110px"><span>Vélez</span></div>
-          <svg class="hub-lines" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-            <line x1="150" y1="150" x2="150" y2="40" />
-            <line x1="150" y1="150" x2="254" y2="185" />
-            <line x1="150" y1="150" x2="210" y2="274" />
-            <line x1="150" y1="150" x2="90" y2="274" />
-            <line x1="150" y1="150" x2="46" y2="185" />
-          </svg>
+<div class="hub-container" style="position: relative; width: 300px; height: 300px;">
+  
+  <div class="hub-spoke" style="--angle:0deg; --dist:110px"><span>Suaita</span></div>
+  <div class="hub-spoke" style="--angle:36deg; --dist:110px"><span>La Paz</span></div>
+  <div class="hub-spoke" style="--angle:72deg; --dist:110px"><span>Puente Nacional</span></div>
+  <div class="hub-spoke" style="--angle:108deg; --dist:110px"><span>El Peñón</span></div>
+  <div class="hub-spoke" style="--angle:144deg; --dist:110px"><span>Vélez</span></div>
+  <div class="hub-spoke" style="--angle:180deg; --dist:110px"><span>Cite</span></div>
+  <div class="hub-spoke" style="--angle:216deg; --dist:110px"><span>Moniquirá</span></div>
+  <div class="hub-spoke" style="--angle:252deg; --dist:110px"><span>Villa de Leyva</span></div>
+  <div class="hub-spoke" style="--angle:288deg; --dist:110px"><span>Chiquinquirá</span></div>
+  <div class="hub-spoke" style="--angle:324deg; --dist:110px"><span>Florián</span></div>
+
+  <svg class="hub-lines" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+    <line x1="150" y1="150" x2="150" y2="40" stroke="black" />
+    <line x1="150" y1="150" x2="215" y2="60" stroke="black" />
+    <line x1="150" y1="150" x2="254" y2="115" stroke="black" />
+    <line x1="150" y1="150" x2="254" y2="185" stroke="black" />
+    <line x1="150" y1="150" x2="210" y2="274" stroke="black" />
+    <line x1="150" y1="150" x2="150" y2="260" stroke="black" />
+    <line x1="150" y1="150" x2="90" y2="274" stroke="black" />
+    <line x1="150" y1="150" x2="46" y2="185" stroke="black" />
+    <line x1="150" y1="150" x2="40" y2="115" stroke="black" />
+    <line x1="150" y1="150" x2="85" y2="60" stroke="black" />
+  </svg>
+</div>
         </div>
       </div>
     </div>
@@ -138,7 +152,7 @@
     <div class="rutas-grid">
 
       <div class="ruta-card" data-tilt>
-        <div class="ruta-img" style="background-image:url('img/landscape-canyon.jpg');">
+        <div class="ruta-img" style="background-image:url('img/cascadas_san_jose.jpg');">
           <div class="ruta-badge" data-es="~45 min desde Barbosa" data-en="~45 min from Barbosa">~45 min desde Barbosa</div>
         </div>
         <div class="ruta-body">
@@ -157,12 +171,12 @@
       </div>
 
       <div class="ruta-card" data-tilt>
-        <div class="ruta-img" style="background-image:url('img/river-valley.jpg');">
-          <div class="ruta-badge" data-es="~35 min desde Barbosa" data-en="~35 min from Barbosa">~35 min desde Barbosa</div>
+        <div class="ruta-img" style="background-image:url('img/hoyo_del_aire.jpg');">
+          <div class="ruta-badge" data-es="~95 min desde Barbosa" data-en="~95 min from Barbosa">~95 min desde Barbosa</div>
         </div>
         <div class="ruta-body">
           <div class="ruta-icon">🌀</div>
-          <h3 data-es="El Hoyo del Aire" data-en="El Hoyo del Aire">El Hoyo del Aire</h3>
+          <h3 data-es="El Hoyo del Aire" data-en="Air Hole">El Hoyo del Aire</h3>
           <p class="ruta-lugar">La Paz</p>
           <p data-es="Un abismo que respira. El Hoyo del Aire es una formación geológica que desafía los sentidos — un portal entre el mundo que conoces y el que la montaña guarda en silencio. Para los valientes, el misticismo más puro de la región." data-en="An abyss that breathes. El Hoyo del Aire is a geological formation that challenges the senses — a portal between the world you know and the one the mountain keeps in silence. For the brave, the region's purest mysticism.">
             Un abismo que respira. El Hoyo del Aire es una formación geológica que desafía los sentidos — un portal entre el mundo que conoces y el que la montaña guarda en silencio. Para los valientes, el misticismo más puro de la región.
@@ -176,8 +190,8 @@
       </div>
 
       <div class="ruta-card" data-tilt>
-        <div class="ruta-img" style="background-image:url('img/church-moto.jpg');">
-          <div class="ruta-badge" data-es="~55 min desde Barbosa" data-en="~55 min from Barbosa">~55 min desde Barbosa</div>
+        <div class="ruta-img" style="background-image:url('img/ventanas_florian.webp');">
+          <div class="ruta-badge" data-es="~120 min desde Barbosa" data-en="~120 min from Barbosa">~120 min desde Barbosa</div>
         </div>
         <div class="ruta-body">
           <div class="ruta-icon">🏔️</div>
@@ -195,12 +209,12 @@
       </div>
 
       <div class="ruta-card" data-tilt>
-        <div class="ruta-img" style="background-image:url('img/bird-woodpecker.png');">
-          <div class="ruta-badge" data-es="~1h desde Barbosa" data-en="~1h from Barbosa">~1h desde Barbosa</div>
+        <div class="ruta-img" style="background-image:url('img/cavernas_el_peñon.jpg');">
+          <div class="ruta-badge" data-es="~120 min desde Barbosa" data-en="~120 min from Barbosa">~120 min desde Barbosa</div>
         </div>
         <div class="ruta-body">
           <div class="ruta-icon">🦅</div>
-          <h3 data-es="Bosque de Piedra" data-en="Stone Forest">Bosque de Piedra</h3>
+          <h3 data-es="Bosque de Piedra" data-en="Stone Forest">Cuevas y Cavernas en el Peñon</h3>
           <p class="ruta-lugar">El Peñón</p>
           <p data-es="Un bosque esculpido por dioses de piedra. El Peñón es el paraíso del avistamiento de aves endémicas y el hogar de formaciones rocosas que parecen esculpidas por titanes. Una sinfonía visual donde el silencio habla más fuerte que cualquier guía." data-en="A forest sculpted by stone gods. El Peñón is the paradise for endemic birdwatching and home to rock formations that appear carved by titans. A visual symphony where silence speaks louder than any guide.">
             Un bosque esculpido por dioses de piedra. El Peñón es el paraíso del avistamiento de aves endémicas y el hogar de formaciones rocosas que parecen esculpidas por titanes. Una sinfonía visual donde el silencio habla más fuerte que cualquier guía.
@@ -268,7 +282,7 @@
       <h2 data-es="La Experiencia Local" data-en="The Local Experience">La <em>Experiencia Local</em></h2>
     </div>
     <div class="exp-grid">
-      <div class="exp-card exp-featured" style="background-image:url('img/culture-woman.jpg');">
+      <div class="exp-card exp-featured" style="background-image:url('img/cocina.png');">
         <div class="exp-card-inner exp-photo-overlay">
           <span class="exp-num">01</span>
           <h3 data-es="Cultura Viva" data-en="Living Culture">Cultura Viva</h3>
@@ -278,17 +292,17 @@
         </div>
       </div>
       <div class="exp-card exp-photo-card">
-        <img src="img/llama-closeup.jpg" alt="Llama en Barbosa Santander" loading="lazy" />
+        <img src="img/bird-sparrow.png" alt="Llama en Barbosa Santander" loading="lazy" />
         <div class="exp-card-inner">
           <span class="exp-num">02</span>
           <h3 data-es="Fauna Doméstica" data-en="Farm Animals">Fauna Doméstica</h3>
-          <p data-es="Del altiplano a la plaza, la llama se ha convertido en símbolo del carácter único de Barbosa — un guiño andino en el corazón santandereano." data-en="From the highlands to the square, the llama has become a symbol of Barbosa's unique character — an Andean wink in the heart of Santander.">
-            Del altiplano a la plaza, la llama se ha convertido en símbolo del carácter único de Barbosa.
+          <p data-es="Del altiplano a la plaza, El copetón  andino se ha convertido en símbolo del carácter único de Barbosa — un guiño andino en el corazón santandereano." data-en="From the highlands to the square, the Copetón Andino has become a symbol of Barbosa's unique character — an Andean wink in the heart of Santander.">
+            Del altiplano a la plaza, el Copetón Andino se ha convertido en símbolo del carácter único de Barbosa.
           </p>
         </div>
       </div>
       <div class="exp-card exp-photo-card">
-        <img src="img/church-moto.jpg" alt="Iglesia colonial en la región" loading="lazy" />
+        <img src="img/IGLESIAPUENTENAL2023.jpg" alt="Iglesia colonial en la región" loading="lazy" />
         <div class="exp-card-inner">
           <span class="exp-num">03</span>
           <h3 data-es="Pueblos & Plazas" data-en="Towns & Squares">Pueblos & Plazas</h3>
@@ -341,7 +355,7 @@
     </div>
     <div class="galeria-masonry">
       <div class="gal-item gal-tall">
-        <img src="img/llama-fountain.jpg" alt="Llama junto a la fuente de Barbosa" loading="lazy" />
+        <img src="img/hoyo_del_aire_2.jpeg" alt="Llama junto a la fuente de Barbosa" loading="lazy" />
         <div class="gal-caption" data-es="La llama de la plaza — ícono de Barbosa" data-en="The square llama — Barbosa's icon">La llama de la plaza — ícono de Barbosa</div>
       </div>
       <div class="gal-item">
@@ -349,7 +363,7 @@
         <div class="gal-caption" data-es="Atrapamoscas Bermellón" data-en="Vermilion Flycatcher">Atrapamoscas Bermellón</div>
       </div>
       <div class="gal-item">
-        <img src="img/landscape-canyon.jpg" alt="Cañón del río Suárez — Barbosa Santander" loading="lazy" />
+        <img src="img/river-valley.jpeg" alt="Cañón del río Suárez — Barbosa Santander" loading="lazy" />
         <div class="gal-caption" data-es="Cañón del río Suárez al atardecer" data-en="Suárez River canyon at dusk">Cañón del río Suárez al atardecer</div>
       </div>
       <div class="gal-item gal-wide">
@@ -357,15 +371,15 @@
         <div class="gal-caption" data-es="Ardilla colorada — agilidad pura" data-en="Red squirrel — pure agility">Ardilla colorada — agilidad pura</div>
       </div>
       <div class="gal-item gal-tall">
-        <img src="img/church-moto.jpg" alt="Iglesia colonial y moto — Sur de Santander" loading="lazy" />
+        <img src="img/IGLESIAPUENTENAL2023.jpg" alt="Iglesia colonial y moto — Sur de Santander" loading="lazy" />
         <div class="gal-caption" data-es="Patrimonio & aventura en una sola imagen" data-en="Heritage & adventure in one image">Patrimonio & aventura en una sola imagen</div>
       </div>
       <div class="gal-item">
-        <img src="img/llama-closeup.jpg" alt="Llama en primer plano — Barbosa" loading="lazy" />
+        <img src="img/familia_senderismo.png" alt="Llama en primer plano — Barbosa" loading="lazy" />
         <div class="gal-caption" data-es="De cerca y sin filtros" data-en="Up close and unfiltered">De cerca y sin filtros</div>
       </div>
       <div class="gal-item gal-wide">
-        <img src="img/culture-woman.jpg" alt="Cultura tradicional — mujer con chicha artesanal" loading="lazy" />
+        <img src="img/hoyo_del_aire_2.jpeg" alt="Cultura tradicional — mujer con chicha artesanal" loading="lazy" />
         <div class="gal-caption" data-es="Saberes ancestrales que no se olvidan" data-en="Ancestral knowledge that is never forgotten">Saberes ancestrales que no se olvidan</div>
       </div>
     </div>
