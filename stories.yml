@@ -1,0 +1,291 @@
+version: "3.1"
+
+stories:
+
+# ── FLUJOS BÁSICOS ─────────────────────────────────────────────────────────
+
+- story: saludo y exploración de rutas
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+    - intent: preguntar_rutas
+    - action: utter_preguntar_rutas
+
+- story: cómo llegar y tarifas
+  steps:
+    - intent: como_llegar
+    - action: utter_como_llegar
+    - intent: preguntar_transporte_tarifas
+    - action: utter_preguntar_transporte_tarifas
+
+- story: saludo directo a cómo llegar
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+    - intent: como_llegar
+    - action: utter_como_llegar
+
+# ── FLUJOS BARBOSA LOCAL ───────────────────────────────────────────────────
+
+- story: explorar Barbosa completo
+  steps:
+    - intent: preguntar_barbosa
+    - action: utter_preguntar_barbosa
+    - intent: preguntar_cuevas_barbosa
+    - action: utter_preguntar_cuevas_barbosa
+    - intent: preguntar_guias
+    - action: utter_preguntar_guias
+
+- story: cascadas y naturaleza Barbosa
+  steps:
+    - intent: preguntar_barbosa
+    - action: utter_preguntar_barbosa
+    - intent: preguntar_chorro_diablo
+    - action: utter_preguntar_chorro_diablo
+    - intent: preguntar_fauna
+    - action: utter_preguntar_fauna
+
+- story: preguntar festival y luego alojamiento
+  steps:
+    - intent: preguntar_festival_rio
+    - action: utter_preguntar_festival_rio
+    - intent: preguntar_hoteles
+    - action: utter_preguntar_hoteles
+
+- story: mirador y panorámica
+  steps:
+    - intent: preguntar_mirador
+    - action: utter_preguntar_mirador
+    - intent: preguntar_gastronomia
+    - action: utter_preguntar_gastronomia
+
+# ── FLUJOS POR DESTINO ─────────────────────────────────────────────────────
+
+- story: ruta a Vélez completa
+  steps:
+    - intent: preguntar_velez
+    - action: utter_preguntar_velez
+    - intent: preguntar_bocadillo
+    - action: utter_preguntar_bocadillo
+    - intent: agradecer
+    - action: utter_agradecer
+
+- story: Moniquirá bienestar
+  steps:
+    - intent: preguntar_moniquira
+    - action: utter_preguntar_moniquira
+    - intent: preguntar_hoteles
+    - action: utter_preguntar_hoteles
+    - intent: preguntar_precio
+    - action: utter_preguntar_precio
+
+- story: ruta aventura Florián
+  steps:
+    - intent: preguntar_florian
+    - action: utter_preguntar_florian
+    - intent: preguntar_guias
+    - action: utter_preguntar_guias
+    - intent: como_llegar
+    - action: utter_como_llegar
+
+- story: ruta extrema Gámbita
+  steps:
+    - intent: preguntar_gambita
+    - action: utter_preguntar_gambita
+    - intent: preguntar_aventura
+    - action: utter_preguntar_aventura
+    - intent: preguntar_guias
+    - action: utter_preguntar_guias
+
+- story: Suaita historia y naturaleza
+  steps:
+    - intent: preguntar_suaita
+    - action: utter_preguntar_suaita
+    - intent: preguntar_precio
+    - action: utter_preguntar_precio
+
+- story: gastronomía Puente Nacional
+  steps:
+    - intent: preguntar_puente_nacional
+    - action: utter_preguntar_puente_nacional
+    - intent: preguntar_gastronomia
+    - action: utter_preguntar_gastronomia
+
+- story: conocer Oiba y volver a Barbosa
+  steps:
+    - intent: preguntar_oiba
+    - action: utter_preguntar_oiba
+    - intent: preguntar_rutas
+    - action: utter_preguntar_rutas
+
+# ── FLUJOS PLANIFICACIÓN ───────────────────────────────────────────────────
+
+- story: planificar viaje completo
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+    - intent: preguntar_plan_dias
+    - action: utter_preguntar_plan_dias
+    - intent: preguntar_hoteles
+    - action: utter_preguntar_hoteles
+    - intent: preguntar_precio
+    - action: utter_preguntar_precio
+    - intent: como_llegar
+    - action: utter_como_llegar
+
+- story: viaje en familia
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+    - intent: preguntar_familia
+    - action: utter_preguntar_familia
+    - intent: preguntar_hoteles
+    - action: utter_preguntar_hoteles
+    - intent: preguntar_gastronomia
+    - action: utter_preguntar_gastronomia
+
+- story: turista de aventura
+  steps:
+    - intent: preguntar_aventura
+    - action: utter_preguntar_aventura
+    - intent: preguntar_gambita
+    - action: utter_preguntar_gambita
+    - intent: preguntar_guias
+    - action: utter_preguntar_guias
+    - intent: preguntar_temporada
+    - action: utter_preguntar_temporada
+
+- story: cuándo viajar y transporte
+  steps:
+    - intent: preguntar_temporada
+    - action: utter_preguntar_temporada
+    - intent: como_llegar
+    - action: utter_como_llegar
+    - intent: preguntar_transporte_tarifas
+    - action: utter_preguntar_transporte_tarifas
+
+- story: naturaleza y fauna
+  steps:
+    - intent: preguntar_fauna
+    - action: utter_preguntar_fauna
+    - intent: preguntar_chorro_diablo
+    - action: utter_preguntar_chorro_diablo
+    - intent: preguntar_florian
+    - action: utter_preguntar_florian
+
+# ── FLUJOS GASTRONÓMICOS ───────────────────────────────────────────────────
+
+- story: tour gastronómico completo
+  steps:
+    - intent: preguntar_gastronomia
+    - action: utter_preguntar_gastronomia
+    - intent: preguntar_bocadillo
+    - action: utter_preguntar_bocadillo
+    - intent: preguntar_puente_nacional
+    - action: utter_preguntar_puente_nacional
+    - intent: agradecer
+    - action: utter_agradecer
+
+- story: gastronomía seguida de hoteles
+  steps:
+    - intent: preguntar_gastronomia
+    - action: utter_preguntar_gastronomia
+    - intent: preguntar_hoteles
+    - action: utter_preguntar_hoteles
+
+# ── DESPEDIDAS ────────────────────────────────────────────────────────────
+
+- story: despedida post información
+  steps:
+    - intent: preguntar_rutas
+    - action: utter_preguntar_rutas
+    - intent: agradecer
+    - action: utter_agradecer
+    - intent: despedirse
+    - action: utter_despedirse
+
+- story: despedida directa
+  steps:
+    - intent: despedirse
+    - action: utter_despedirse
+
+---
+# ── RULES ────────────────────────────────────────────────────────────────
+version: "3.1"
+
+rules:
+
+- rule: siempre responder saludo
+  steps:
+    - intent: saludar
+    - action: utter_saludar
+
+- rule: siempre responder despedida
+  steps:
+    - intent: despedirse
+    - action: utter_despedirse
+
+- rule: siempre responder agradecimiento
+  steps:
+    - intent: agradecer
+    - action: utter_agradecer
+
+- rule: preguntas directas sobre tarifas
+  steps:
+    - intent: preguntar_transporte_tarifas
+    - action: utter_preguntar_transporte_tarifas
+
+- rule: preguntas directas sobre bocadillo
+  steps:
+    - intent: preguntar_bocadillo
+    - action: utter_preguntar_bocadillo
+
+- rule: preguntas directas sobre familia
+  steps:
+    - intent: preguntar_familia
+    - action: utter_preguntar_familia
+
+- rule: preguntas directas sobre temporada
+  steps:
+    - intent: preguntar_temporada
+    - action: utter_preguntar_temporada
+
+- rule: preguntas directas sobre aventura
+  steps:
+    - intent: preguntar_aventura
+    - action: utter_preguntar_aventura
+
+- rule: preguntas directas sobre fauna
+  steps:
+    - intent: preguntar_fauna
+    - action: utter_preguntar_fauna
+
+- rule: preguntas directas sobre mirador
+  steps:
+    - intent: preguntar_mirador
+    - action: utter_preguntar_mirador
+
+- rule: preguntas directas sobre chorro del diablo
+  steps:
+    - intent: preguntar_chorro_diablo
+    - action: utter_preguntar_chorro_diablo
+
+- rule: preguntas directas sobre cuevas de barbosa
+  steps:
+    - intent: preguntar_cuevas_barbosa
+    - action: utter_preguntar_cuevas_barbosa
+
+- rule: preguntas directas sobre festival
+  steps:
+    - intent: preguntar_festival_rio
+    - action: utter_preguntar_festival_rio
+
+- rule: preguntas directas sobre Oiba
+  steps:
+    - intent: preguntar_oiba
+    - action: utter_preguntar_oiba
+
+- rule: preguntas directas plan por días
+  steps:
+    - intent: preguntar_plan_dias
+    - action: utter_preguntar_plan_dias

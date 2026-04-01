@@ -1,0 +1,486 @@
+version: "3.1"
+
+intents:
+  - saludar
+  - como_llegar
+  - preguntar_transporte_tarifas
+  - preguntar_rutas
+  - preguntar_barbosa
+  - preguntar_mirador
+  - preguntar_cuevas_barbosa
+  - preguntar_chorro_diablo
+  - preguntar_festival_rio
+  - preguntar_velez
+  - preguntar_bocadillo
+  - preguntar_moniquira
+  - preguntar_florian
+  - preguntar_gambita
+  - preguntar_suaita
+  - preguntar_puente_nacional
+  - preguntar_oiba
+  - preguntar_gastronomia
+  - preguntar_hoteles
+  - preguntar_fauna
+  - preguntar_precio
+  - preguntar_guias
+  - preguntar_temporada
+  - preguntar_plan_dias
+  - preguntar_familia
+  - preguntar_aventura
+  - despedirse
+  - agradecer
+
+responses:
+
+  utter_saludar:
+    - text: |
+        ¡Hola! 👋 Soy el asistente virtual de **Barbosa Turismo** — la Puerta de Oro de Santander.
+        Puedo ayudarte con información sobre:
+        🏖️ Balnearios y cascadas · 🦅 Avistamiento de aves · 🍽️ Gastronomía típica
+        🏨 Hoteles · 🚗 Cómo llegar · 🗓️ Itinerarios
+        ¿Qué te gustaría explorar hoy?
+
+  utter_como_llegar:
+    - text: |
+        🚗 **Cómo llegar a Barbosa (Santander)**
+
+        Barbosa actúa como nodo donde convergen **4 troncales nacionales**:
+
+        **Desde Bogotá:** ~3 horas por la vía Bogotá → Tunja → Moniquirá → Barbosa
+        **Desde Bucaramanga:** ~3h por la troncal norte
+        **Desde San Gil:** ~1h 15min hacia el sur
+
+        **🚌 Empresa recomendada: Transportes Reina**
+        Salen desde la Terminal del Norte (Bogotá) y Terminal Salitre.
+
+        ¿Quieres saber las tarifas exactas de los pasajes?
+
+  utter_preguntar_transporte_tarifas:
+    - text: |
+        💰 **Tarifas Transportes Reina 2026 hacia Barbosa:**
+
+        | Origen | A Barbosa | A Oiba |
+        |---|---|---|
+        | Bogotá (Salitre/Norte) | $50.000 | $72.000 |
+        | Bucaramanga | $73.000 | $53.000 |
+        | San Gil | $44.000 | $26.000 |
+        | Chiquinquirá | $15.000 | $48.000 |
+        | Sutatausa | $39.000 | $61.000 |
+
+        *Datos de tarifas oficiales 2026.*
+        Una vez en Barbosa, taxis locales te llevan a Moniquirá o Puente Nacional por $5.000–$10.000. ¿Necesitas más detalles?
+
+  utter_preguntar_rutas:
+    - text: |
+        🗺️ **Destinos desde Barbosa — radio de 2 horas:**
+
+        **⚡ Menos de 30 min:**
+        📍 Moniquirá (10 min) — spas y cascadas
+        📍 Puente Nacional (15 min) — El Balay típico
+        📍 Vélez (25 min) — bocadillo y catedral
+
+        **🕐 30–90 min:**
+        📍 Suaita (45 min) — Cascada de los Caballeros 120m
+        📍 Oiba (1h) — Pueblito Pesebre y artesanías
+
+        **🕑 90 min – 2h:**
+        📍 Florián (1h 30m) — Ventanas de Tisquizoque 300m
+        📍 Gámbita (2h) — Manto de la Virgen 500m
+
+        ¿Cuál de estos destinos quieres explorar primero?
+
+  utter_preguntar_barbosa:
+    - text: |
+        🌊 **Barbosa — La Puerta de Oro de Santander**
+
+        El corazón de todo es el **Río Suárez**. Estos son sus principales atractivos:
+
+        **🏖️ Balnearios:**
+        • **Playa Piedra de Pato** — sede del Festival del Río cada enero
+        • **Charcos La Playita** (vereda La Playa) — tranquilos y conservados
+        • **Charco Dos Quebradas** — ideal para "turismo de olla" con familia
+
+        **⛰️ Aventura:**
+        • **Chorro del Diablo** (La Chorrera) — cascada en vegetación densa, ideal para observar aves
+        • **Cueva de Sánchez** — 6 cuevas en zona cafetera, requiere guía
+        • **Mirador del Cristo Rey** — panorámica total del municipio y el río
+
+        ¿Sobre cuál quieres profundizar?
+
+  utter_preguntar_mirador:
+    - text: |
+        ⛰️ **Mirador del Cristo Rey — Barbosa**
+
+        Situado en la cima de una colina que **domina toda la panorámica del municipio** y el curso serpenteante del Río Suárez.
+
+        • La caminata es moderada (~40 min subida)
+        • No se requiere guía, el sendero está marcado
+        • Ideal al amanecer o al atardecer para fotografía
+        • Desde arriba se entiende por qué Barbosa es el nodo logístico de la región
+
+        💡 *Tip:* combínalo con un desayuno típico en el pueblo antes de subir.
+
+  utter_preguntar_cuevas_barbosa:
+    - text: |
+        🕳️ **Cueva de Sánchez — Barbosa**
+
+        Un sistema de **6 cuevas** inmersas en zona cafetera. Lo que la hace única:
+
+        • Oscuridad total — experiencia sensorial completa
+        • Formaciones kársticas de gran valor geológico
+        • **Requiere guía certificado** (la Alcaldía tiene lista de guías locales)
+        • Tiempo de recorrido: 2–3 horas
+        • Dificultad: media-alta (ropa que pueda ensuciarse)
+
+        💡 Es perfecta para combinarse con el **Chorro del Diablo** en el mismo día.
+        ¿Quieres que te ayude a contactar un guía?
+
+  utter_preguntar_chorro_diablo:
+    - text: |
+        💧 **Chorro del Diablo — Vereda La Chorrera, Barbosa**
+
+        Una cascada de caída imponente rodeada de **vegetación densa** que crea un microclima fresco y húmedo.
+
+        ✅ Ideal para: observación de aves endémicas
+        ✅ Nivel de dificultad: moderado
+        ✅ Ambiente: bosque húmedo, flora nativa
+        🦜 El dosel vegetal protege múltiples especies de aves que solo se encuentran en este microhábitat
+
+        💡 *Combínalo con la Cueva de Sánchez para un día de aventura completa.*
+
+  utter_preguntar_festival_rio:
+    - text: |
+        🎉 **Festival del Río Suárez — Barbosa**
+
+        📅 **Mes:** Enero de cada año
+        📍 **Lugar:** Playa Piedra de Pato, orillas del Río Suárez
+
+        Es mucho más que una fiesta local — es una articulación social y económica que atrae miles de turistas:
+
+        🏎️ Demostración de **kartismo**
+        🚵 **Mountain bike** de alta competencia
+        👑 Reinados populares
+        🍽️ Feria gastronómica con sabores veleños
+        🎵 Música en vivo y comparsas
+
+        La geología del lugar crea una "playa costera" natural en medio de las montañas.
+        ¡Es la experiencia más vibrante del año en Barbosa!
+
+  utter_preguntar_velez:
+    - text: |
+        🏛️ **Vélez, Santander — A solo 25 min de Barbosa**
+
+        El centro cultural de la provincia. Sus joyas:
+
+        **🕌 Catedral Atravesada (Nuestra Señora de las Nieves)**
+        Construida en 1560 — su entrada principal está en el costado lateral, una anomalía arquitectónica única en el mundo dictada por la topografía del terreno.
+
+        **🎵 Parque Nacional del Folclor**
+        Sede del **Festival de la Guabina y el Tiple** — uno de los festivales musicales más importantes de Colombia. Ritmos como el torbellino y la guabina llenan las plazas.
+
+        **🏠 Centro Histórico**
+        Arquitectura de tapia pisada, balcones de madera y tejados de barro de los siglos XVI–XVII.
+
+        **🍬 Capital del Bocadillo Veleño**
+        Denominación de origen protegida. ¿Quieres saber más del bocadillo?
+
+  utter_preguntar_bocadillo:
+    - text: |
+        🍬 **El Bocadillo Veleño — Denominación de Origen**
+
+        El producto estrella de Vélez combina saber artesanal con estándares modernos:
+
+        **Proceso:** Guayaba roja + guayaba blanca → cocción lenta → bloques envueltos en **hoja de bijao** (empaque 100% biodegradable)
+
+        **Dónde verlo hacer:**
+        🏭 **Fruti Fresca** — permite recorridos guiados por la fábrica
+        🛒 Plazas de mercado de Vélez (más económico)
+
+        **Festividades:**
+        👑 **Reinado Nacional del Bocadillo** — celebra la productividad agrícola de la región
+
+        💡 *El bocadillo con queso campesino fresco es la combinación tradicional. ¡No te vayas sin probarlo!*
+
+  utter_preguntar_moniquira:
+    - text: |
+        🌿 **Moniquirá, Boyacá — A solo 10 min de Barbosa**
+
+        La "Ciudad Dulce de Colombia" — complemento perfecto de Barbosa:
+
+        **🏨 Turismo de Bienestar:**
+        • **Hotel Palmeras de Luz** — spa, sauna, jacuzzi, Restaurante Aromas de mi Tierra (fusión boyacense-internacional)
+        • **Centro Vacacional Chiminigagua** — complejo de piscinas, spa y terapias de relajación
+
+        **🌊 Naturaleza:**
+        • **Cascada La Honda** — en parque ecológico bien mantenido, biodiversidad de la Provincia de Ricaurte
+
+        **💡 Tip:** Hoteles como **La Floresta de Cite** (Barbosa) sirven como base para explorar tanto Santander como Boyacá en el mismo viaje.
+
+  utter_preguntar_florian:
+    - text: |
+        🏔️ **Florián — "Ciudad de las Ventanas Abiertas"** (~1h 30m de Barbosa)
+
+        **⭐ Atractivo principal: Ventanas de Tisquizoque**
+
+        Una cueva natural en la montaña de la cual emerge una quebrada que se precipita en una **cascada de 3 escalones sumando +300 metros de altura** — una de las maravillas de Santander.
+
+        La experiencia completa:
+        🕳️ Caminar dentro de la cueva rodeado de estalactitas y estalagmitas
+        🌊 Escuchar el río emerger desde las entrañas de la montaña
+        🏞️ Asomarse a la "ventana" natural con vista al abismo y la cascada
+
+        **Logística:**
+        🚕 Taxi desde Barbosa: $20.000–$25.000
+        ⏱️ Tiempo de viaje: 1h 30m–2h (vía veredal, puede variar)
+        🏅 Se recomienda guía local
+
+  utter_preguntar_gambita:
+    - text: |
+        🌊 **Gámbita, Santander — Aventura extrema** (~2h de Barbosa)
+
+        **⭐ El Manto de la Virgen — Cascada de +500 metros** (una de las más altas de Colombia)
+
+        Sus aguas tienen un color rojizo único, producto de los taninos de los **robledales** circundantes.
+
+        **Actividades:**
+        🧗 **Canyoning** en el cañón
+        🕳️ **Espeleología** en la Cueva del Chocó
+        🥾 **Senderismo de alta dificultad** en el Cañón de la Hondura
+        💨 **La Humeadora** — cascada donde el agua genera bruma constante al chocar con las rocas
+
+        ⚠️ *Gámbita es para viajeros con experiencia en trekking. Requiere guía especializado y condición física.*
+        ¿Te interesa el senderismo extremo o prefieres algo más tranquilo?
+
+  utter_preguntar_suaita:
+    - text: |
+        💧 **Suaita — Naturaleza e historia industrial** (~45 min de Barbosa)
+
+        **⭐ Cascada de los Caballeros — 120 metros de caída**
+        Se puede explorar en **3 niveles diferentes** — torrentismo y rappel disponibles.
+
+        **Dato histórico único:**
+        Suaita alberga las ruinas de la **primera fábrica textil de Colombia** en San José de Suaita.
+        🏛️ El **Museo del Algodón** narra el inicio de la era industrial colombiana — una mezcla única de naturaleza y patrimonio histórico.
+
+        💡 *Ideal para el viajero que quiere más que paisajes — quiere entender la historia del país.*
+
+  utter_preguntar_puente_nacional:
+    - text: |
+        🍽️ **Puente Nacional — El Balay** (a solo 15 min de Barbosa)
+
+        **El plato más emblemático de la región:**
+
+        🧺 **El Balay** se sirve en un canasto tejido (el "balay") y consiste en:
+        • Gallina criolla de campo
+        • Yuca, arracacha, plátano y papa
+        • Guiso de cebolla larga y tomate
+        • Colorante natural de cúrcuma (sin artificiales)
+        • Todo envuelto en **hojas de bijao** que conservan el calor y el aroma
+
+        La cocción en leña es el secreto de su sabor inconfundible.
+
+        💡 Es el plato perfecto después de un día de senderismo. ¡Los locales dicen que es el "piquete de los reyes"!
+
+  utter_preguntar_oiba:
+    - text: |
+        🎨 **Oiba — "El Pueblito Pesebre"** (~1h de Barbosa)
+
+        Un municipio de arquitectura colonial conservada que luce como un pesebre viviente:
+
+        🏺 **Artesanías en Caolín** — material local que da vida a piezas únicas
+        ⛪ **Templo de San Miguel** — patrimonio arquitectónico colonial
+        🎨 Talleres de artesanos locales donde puedes ver y comprar directamente
+
+        💡 *Perfecto para incluir en una ruta de regreso desde Florián o Gámbita.*
+
+  utter_preguntar_gastronomia:
+    - text: |
+        🍽️ **Gastronomía de la Provincia de Vélez — Un viaje de sabores**
+
+        **Platos que debes probar:**
+
+        🥩 **Piquete Santandereano** — el rey de las carreteras:
+        • Carne oreada (marinada y secada al sol)
+        • Cabrito al horno
+        • Pepitoria (arroz con vísceras de cabro)
+        • Arepa de maíz pela'o
+
+        🍳 **Desayunos en Barbosa:**
+        • **Arepas donde Julia** — caldo de carne + arepa artesanal de maíz
+        (reconocido como uno de los mejores desayunos del municipio)
+
+        🍬 **El Balay** (Puente Nacional, 15 min) — gallina en canasto
+        🍬 **Bocadillo con queso** (Vélez, 25 min) — el dulce más famoso de Colombia
+
+        ¿Quieres saber dónde comer en algún destino específico?
+
+  utter_preguntar_hoteles:
+    - text: |
+        🏨 **Alojamiento en Barbosa y la región**
+
+        **En Barbosa:**
+        • **Turrim Dei Hotel Boutique** — planes de aventura y ecoturismo integrados
+        • **La Floresta de Cite** — base ideal para explorar Santander y Boyacá
+        • Posadas familiares y hospedajes económicos en el centro
+
+        **En Moniquirá (10 min):**
+        • **Hotel Palmeras de Luz** — spa, piscinas, restaurante gourmet
+        • **Centro Vacacional Chiminigagua** — complejo familiar con todas las comodidades
+
+        💡 *Recomendación:* Hospédate en Barbosa si quieres explorar múltiples destinos — su posición central te ahorra tiempo y transporte.
+        ¿Tienes presupuesto o fechas específicas?
+
+  utter_preguntar_fauna:
+    - text: |
+        🦜 **Fauna y vida silvestre de la Provincia de Vélez**
+
+        La región es un paraíso para observadores de naturaleza:
+
+        **Aves más avistadas:**
+        🔴 **Atrapamoscas Bermellón** *(Pyrocephalus rubinus)* — pecho rojo brillante
+        🐦 **Copetón Andino** *(Zonotrichia capensis)* — el "gorrión de los Andes"
+        🪶 **Carpintero Real** *(Dryocopus pileatus)* — gran tamaño, cresta roja
+        🌿 Diversas especies de tangaras y colibríes endémicos
+
+        **Mamíferos:**
+        🐿️ **Ardilla colorada** *(Sciurus granatensis)* — ágil y fotogénica
+        🦙 Llamas y fauna doméstica andina en las plazas
+
+        💡 *El Chorro del Diablo y el Bosque de Piedra (El Peñón) son los mejores puntos de avistamiento.*
+        ¿Tienes binoculares? ¡Los necesitarás!
+
+  utter_preguntar_precio:
+    - text: |
+        💰 **Tarifas aproximadas de tours (COP por persona):**
+
+        | Tour | Precio Est. |
+        |---|---|
+        | Cascadas en Barbosa (Chorro del Diablo) | $40.000–$80.000 |
+        | Cueva de Sánchez + guía | $60.000–$100.000 |
+        | Ventanas de Tisquizoque (Florián) | $80.000–$130.000 |
+        | Cascada Caballeros (Suaita) | $70.000–$120.000 |
+        | Gámbita — Manto de la Virgen | $100.000–$180.000 |
+        | Paquete fin de semana (2 días) | $350.000–$600.000 |
+
+        *Incluye guía certificado, transporte local y seguro básico.*
+
+        Los costos de alimentación en la región son muy accesibles: desayuno típico ~$15.000, almuerzo ~$25.000.
+        ¿Quieres una cotización personalizada?
+
+  utter_preguntar_guias:
+    - text: |
+        🏅 **Guías certificados — Barbosa Turismo**
+
+        Todos nuestros guías cuentan con:
+
+        ✅ Certificación del **Ministerio de Comercio, Industria y Turismo** de Colombia
+        ✅ Capacitación en **primeros auxilios** y protocolo de emergencias
+        ✅ Conocimiento profundo del territorio — nacidos y criados en la región
+        ✅ Experiencia en cuevas, cascadas, senderismo y avistamiento de aves
+        ✅ Manejo básico de inglés
+
+        **Nota especial:**
+        Para la **Cueva de Sánchez** y la **Cueva del Chocó (Gámbita)**, el guía es obligatorio por seguridad — oscuridad total y terreno irregular.
+
+        ¿Quieres que te ayude a reservar un guía para tu visita?
+
+  utter_preguntar_temporada:
+    - text: |
+        🌤️ **Mejor época para visitar Barbosa y la región**
+
+        Barbosa tiene **clima templado-cálido** todo el año (promedio 22–26°C) gracias a su ubicación en el Valle del Río Suárez.
+
+        **📅 Temporada alta (más turistas):**
+        • Diciembre–Enero (Festival del Río en enero)
+        • Semana Santa
+        • Junio–Julio (vacaciones escolares)
+
+        **🌿 Temporada ideal para naturaleza:**
+        • Febrero–Abril: después de lluvia, cascadas en su máximo esplendor
+        • Agosto–Octubre: clima más seco, mejor para senderismo y cuevas
+
+        ⚠️ *Las vías hacia Florián y Gámbita pueden complicarse en época de lluvias intensas (abril–mayo y octubre–noviembre).*
+
+        ¿Cuándo tienes planeado viajar?
+
+  utter_preguntar_plan_dias:
+    - text: |
+        🗓️ **Itinerario recomendado para Barbosa y la región**
+
+        **🌟 Fin de semana (2 días):**
+        **Día 1:** Llegada a Barbosa → Playa Piedra de Pato → Mirador Cristo Rey → Cena típica
+        **Día 2:** Cueva de Sánchez + Chorro del Diablo → Tarde en Vélez (Catedral Atravesada + bocadillo)
+
+        **🌟 3 días:**
+        + **Día 3:** Suaita (Cascada de los Caballeros) + Museo del Algodón → Puente Nacional (El Balay)
+
+        **🌟 4–5 días (completo):**
+        + **Día 4:** Moniquirá (spa o cascada La Honda)
+        + **Día 5:** Florián (Ventanas de Tisquizoque) — la joya de la región
+
+        💡 *Para Gámbita (Manto de la Virgen) se recomienda salida muy temprana o noche previa en Oiba.*
+
+        ¿Cuántos días tienes disponibles?
+
+  utter_preguntar_familia:
+    - text: |
+        👨‍👩‍👧‍👦 **Barbosa es perfecta para familias con niños**
+
+        **Actividades familiares recomendadas:**
+
+        🏖️ **Playa Piedra de Pato** — aguas tranquilas del Río Suárez, arena natural, muy segura para niños
+        🌊 **Charcos La Playita** — ambiente tranquilo y conservado
+        🎉 **Festival del Río (enero)** — espectáculos de kartismo, música y gastronomía
+        🏛️ **Vélez** — catedral, música folclórica y fábricas de bocadillo
+        🍽️ **Puente Nacional** — El Balay, experiencia gastronómica única
+
+        **Actividades con mayor exigencia (≥ 10 años):**
+        🕳️ Cueva de Sánchez (con guía)
+        🥾 Mirador del Cristo Rey (caminata moderada)
+
+        💡 *Moniquirá (10 min) tiene piscinas y jacuzzis ideales para días de descanso familiar.*
+
+  utter_preguntar_aventura:
+    - text: |
+        🧗 **Aventura y deportes extremos en la región de Barbosa**
+
+        **En Barbosa mismo:**
+        🚵 **Mountain Bike** — circuitos del Festival del Río (enero)
+        🏎️ **Kartismo** en Playa Piedra de Pato
+        🥾 Senderismo al Chorro del Diablo y Cueva de Sánchez
+
+        **Suaita (45 min):**
+        🌊 **Torrentismo** en la Cascada de los Caballeros (120m)
+        🧗 Rappel en 3 niveles de la cascada
+
+        **Gámbita (2h) — nivel experto:**
+        🧗 **Canyoning** en el Cañón de la Hondura
+        🕳️ **Espeleología** en Cueva del Chocó
+        🥾 Senderismo de alta dificultad al Manto de la Virgen (500m)
+
+        **Río Suárez:**
+        🚣 **Kayak y tubing** en los tramos tranquilos
+
+        ¿Cuál de estas aventuras se ajusta a tu nivel de experiencia?
+
+  utter_despedirse:
+    - text: "¡Hasta pronto! 👋 Esperamos verte muy pronto en Barbosa — donde cada camino lleva a una cascada, cada pueblo a una historia y cada plato a una tradición centenaria. ♥🌿"
+
+  utter_agradecer:
+    - text: "¡Con gusto! 😊 Si necesitas más información o quieres reservar un tour, escríbenos por WhatsApp o llena el formulario de contacto. ¡Barbosa te espera! 🌿"
+
+  utter_default:
+    - text: |
+        Hmm, no estoy seguro de entender tu pregunta. 🤔
+        Puedo ayudarte con:
+        • 🗺️ Rutas y destinos cercanos
+        • 🏨 Hoteles y alojamiento
+        • 🍽️ Gastronomía típica
+        • 🚗 Cómo llegar y tarifas
+        • 🦅 Fauna y naturaleza
+        • 🗓️ Itinerarios por días
+        ¿Sobre cuál de estos temas quieres información?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

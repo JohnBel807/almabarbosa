@@ -98,17 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const places = [
-    { lat: 5.934299471956952, lng: -73.611280677134, icon: barbosaIcon, popup: '<strong style="color:#c9a84c">♥ Barbosa</strong><br>Tu base de operaciones', main: true },
-    { lat: 6.101657585638258, lng: -73.44097421554945, icon: destIcon('💧','Suaita'), popup: '<strong>Cascadas de San José</strong><br>Suaita · ~45 min' },
-    { lat: 6.178113787625631, lng: -73.5885492522133, icon: destIcon('🌀','La Paz'), popup: '<strong>El Hoyo del Aire</strong><br>La Paz · ~1:35 min' },
-    { lat: 5.80371276229806,  lng: -73.96953947126595, icon: destIcon('🏔️','Florián'), popup: '<strong>Ventanas de Tisquizoque</strong><br>Florián · ~2:00 min' },
-    { lat: 6.055333396868314, lng: -73.81402371730104, icon: destIcon('🦅','El Peñón'), popup: '<strong>Cavernas de Piedra</strong><br>El Peñón · ~2h' },
-    { lat: 6.015172339373251, lng: -73.67268633483185, icon: destIcon('🍬','Vélez'), popup: '<strong>Vélez</strong><br>Capital del Bocadillo' },
-    { lat: 5.965406565606156, lng: -73.60426349570352, icon: destIcon('🦅','Cite'), popup: '<strong>Cite</strong><br>Primer Municipio de Colombia · ~ 10 min' },
-    { lat: 5.871888382101548, lng: -73.57178798453147, icon: destIcon('🍬','Moniquirá'), popup: '<strong>Moniquirá</strong><br>Capital Dulce de Colombia · ~ 10 min' },
-    { lat: 5.63568795998168,  lng: -73.52632907162626, icon: destIcon('🏔️','Villa de Leyva'), popup: '<strong>Villa de Leyva</strong><br>se redactaron las nuevas leyes después de la independencia de 1812 · ~110 min' },
-    { lat: 5.621255925247244, lng: -73.81671735484137, icon: destIcon('🍬','Chiquinquirá'), popup: '<strong>Chiquinquirá</strong><br>Basílica de Nuestra Señora del Rosario de Chiquinquirá · ~100 min' },
-    { lat: 6.015172339373251, lng: -73.67268633483185, icon: destIcon('💧','Puente Nacional'), popup: '<strong>Puente Nacional</strong><br>Puente Nacional · ~10 min ' }
+    { lat: 6.1833, lng: -73.6167, icon: barbosaIcon, popup: '<strong style="color:#c9a84c">♥ Barbosa</strong><br>Tu base de operaciones', main: true },
+    { lat: 6.1000, lng: -73.7500, icon: destIcon('💧','Suaita'), popup: '<strong>Cascadas de San José</strong><br>Suaita · ~45 min' },
+    { lat: 6.2800, lng: -73.5500, icon: destIcon('🌀','La Paz'), popup: '<strong>El Hoyo del Aire</strong><br>La Paz · ~35 min' },
+    { lat: 6.0500, lng: -73.8000, icon: destIcon('🏔️','Florián'), popup: '<strong>Ventanas de Tisquizoque</strong><br>Florián · ~55 min' },
+    { lat: 6.3500, lng: -73.5000, icon: destIcon('🦅','El Peñón'), popup: '<strong>Bosque de Piedra</strong><br>El Peñón · ~1h' },
+    { lat: 6.0333, lng: -73.6667, icon: destIcon('🍬','Vélez'), popup: '<strong>Vélez</strong><br>Capital del Bocadillo' },
   ];
 
   places.forEach(p => {
@@ -126,107 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-// ===== CHATBOT =====
-let chatOpen = true;
-const BOT_DELAY = 900;
-
-const botResponses = {
-  es: {
-    'llegar': '🚗 Barbosa está a ~3h de Bogotá por la ruta Bogotá–Tunja–Barbosa (vía Moniquirá). También puedes tomar bus desde el Terminal del Norte. ¿Necesitas más detalles?',
-    'rutas': '🗺️ Las rutas más populares son:\n• 💧 Cascadas de San José (Suaita)\n• 🌀 El Hoyo del Aire (La Paz)\n• 🏔️ Ventanas de Tisquizoque (Florián)\n• 🦅 Bosque de Piedra (El Peñón)\n¿Cuál te llama más?',
-    'hotel': '🏨 Barbosa ofrece hoteles boutique, posadas y hostales para todos los presupuestos. Escríbenos en el formulario y te enviamos opciones personalizadas.',
-    'hospedarse': '🏨 Barbosa ofrece hoteles boutique, posadas y hostales para todos los presupuestos. Escríbenos en el formulario y te enviamos opciones personalizadas.',
-    'comer': '🍽️ ¡La gastronomía es un viaje en sí! Prueba el piquete veleño, bocadillo con queso, mondongo santandereano, chicha y hornado. ¡El sabor de Vélez no se olvida!',
-    'precio': '💰 Los tours oscilan entre $80.000 y $250.000 COP por persona según el destino. Escríbenos para cotizaciones personalizadas.',
-    'festival': '🎭 El Festival del Río se celebra generalmente en julio-agosto. ¡Es la fiesta más grande de la región con música, gastronomía y regatas!',
-    'default': '🌿 ¡Gracias por tu pregunta! Para información detallada, puedes escribirnos por WhatsApp o llenar el formulario de contacto. Un guía certificado te responderá pronto.'
-  },
-  en: {
-    'get there': '🚗 Barbosa is ~3h from Bogotá via the Bogotá–Tunja–Barbosa route (via Moniquirá). You can also take a bus from Norte Terminal. Need more details?',
-    'routes': '🗺️ Most popular routes:\n• 💧 San José Waterfalls (Suaita)\n• 🌀 El Hoyo del Aire (La Paz)\n• 🏔️ Tisquizoque Windows (Florián)\n• 🦅 Stone Forest (El Peñón)\nWhich calls you most?',
-    'hotel': '🏨 Barbosa offers boutique hotels, guesthouses, and hostels for all budgets. Fill out the form and we\'ll send you personalized options.',
-    'food': '🍽️ The gastronomy is a journey itself! Try piquete veleño, bocadillo with cheese, santanderian mondongo, chicha and hornado. The flavor of Vélez is unforgettable!',
-    'default': '🌿 Thanks for your question! For detailed info, WhatsApp us or fill out the contact form. A certified guide will get back to you soon.'
-  }
-};
-
-function getBotResponse(msg) {
-  const m = msg.toLowerCase();
-  const responses = botResponses[currentLang] || botResponses.es;
-  for (const [key, response] of Object.entries(responses)) {
-    if (key !== 'default' && m.includes(key)) return response;
-  }
-  return responses.default;
-}
-
-function addMessage(text, isUser) {
-  const messagesEl = document.getElementById('chatMessages');
-  const div = document.createElement('div');
-  div.className = `chat-msg ${isUser ? 'user' : 'bot'}`;
-  div.innerHTML = `<div class="chat-bubble">${text.replace(/\n/g, '<br>')}</div>`;
-  messagesEl.appendChild(div);
-  messagesEl.scrollTop = messagesEl.scrollHeight;
-}
-
-function addTyping() {
-  const messagesEl = document.getElementById('chatMessages');
-  const div = document.createElement('div');
-  div.className = 'chat-msg bot';
-  div.id = 'typingIndicator';
-  div.innerHTML = `<div class="chat-bubble"><div class="chat-typing"><span></span><span></span><span></span></div></div>`;
-  messagesEl.appendChild(div);
-  messagesEl.scrollTop = messagesEl.scrollHeight;
-}
-
-function removeTyping() {
-  const t = document.getElementById('typingIndicator');
-  if (t) t.remove();
-}
-
-function sendChat() {
-  const input = document.getElementById('chatInput');
-  const msg = input.value.trim();
-  if (!msg) return;
-  input.value = '';
-  addMessage(msg, true);
-  document.getElementById('quickReplies').style.display = 'none';
-  addTyping();
-  setTimeout(() => {
-    removeTyping();
-    // Try Rasa first, fallback to local
-    sendToRasa(msg).then(response => {
-      addMessage(response, false);
-    }).catch(() => {
-      addMessage(getBotResponse(msg), false);
-    });
-  }, BOT_DELAY);
-}
-
-async function sendToRasa(msg) {
-  const res = await fetch('/api/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ sender: 'user_' + Date.now(), message: msg })
-  });
-  if (!res.ok) throw new Error('Rasa unavailable');
-  const data = await res.json();
-  if (data && data.response) return data.response;
-  throw new Error('No response');
-}
-
-function sendQuick(msg) {
-  document.getElementById('chatInput').value = msg;
-  sendChat();
-}
-
-function toggleChat() {
-  chatOpen = !chatOpen;
-  const body = document.getElementById('chatBody');
-  const toggle = document.getElementById('chatToggle');
-  body.style.display = chatOpen ? 'flex' : 'none';
-  toggle.style.transform = chatOpen ? '' : 'rotate(180deg)';
-}
 
 // ===== FORM SUBMIT =====
 async function submitForm(e) {

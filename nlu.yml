@@ -1,0 +1,332 @@
+version: "3.1"
+
+nlu:
+
+# ── SALUDOS ────────────────────────────────────────────────────────────────
+- intent: saludar
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - hey
+    - hi
+    - hello
+    - qué tal
+    - cómo están
+    - saludos
+    - buen día
+    - quiero información
+    - necesito ayuda
+
+# ── CÓMO LLEGAR ────────────────────────────────────────────────────────────
+- intent: como_llegar
+  examples: |
+    - cómo llego a Barbosa
+    - cómo llegar a Barbosa
+    - cómo puedo ir a Barbosa
+    - transporte a Barbosa
+    - bus a Barbosa
+    - cómo llegar desde Bogotá
+    - cuánto demora el viaje
+    - cuántas horas desde Bogotá
+    - cuánto cuesta el bus desde Bogotá
+    - cómo ir desde Bucaramanga
+    - cómo ir desde San Gil
+    - transportes Reina
+    - buses desde Bogotá
+    - desde el salitre a Barbosa
+    - terminal del norte
+    - how to get to Barbosa
+
+- intent: preguntar_transporte_tarifas
+  examples: |
+    - cuánto cuesta el pasaje desde Bogotá
+    - precio del bus desde Bogotá
+    - tarifa de Transportes Reina
+    - cuánto vale ir desde Bucaramanga
+    - precio desde San Gil
+    - tarifas de transporte
+    - cuánto cuesta viajar desde Chiquinquirá
+    - valor del tiquete
+    - precios de buses
+
+- intent: preguntar_rutas
+  examples: |
+    - qué rutas hay
+    - qué se puede visitar
+    - lugares para visitar
+    - destinos cercanos
+    - dónde puedo ir desde Barbosa
+    - qué hay para hacer
+    - recomiéndame un plan
+    - planes turísticos
+    - qué hay cerca de Barbosa
+    - atractivos turísticos
+    - qué visitar
+    - tourist attractions
+
+- intent: preguntar_barbosa
+  examples: |
+    - qué hacer en Barbosa
+    - atracciones de Barbosa
+    - qué tiene Barbosa
+    - río Suárez
+    - balneario Barbosa
+    - Playa Piedra de Pato
+    - playa en Barbosa
+    - dónde bañarme en Barbosa
+    - charcos en Barbosa
+    - Charco Dos Quebradas
+    - La Playita Barbosa
+
+- intent: preguntar_mirador
+  examples: |
+    - hay miradores en Barbosa
+    - Cristo Rey Barbosa
+    - Mirador del Cristo Rey
+    - dónde ver el paisaje en Barbosa
+    - panorámica de Barbosa
+    - caminata al mirador
+
+- intent: preguntar_cuevas_barbosa
+  examples: |
+    - Cueva de Sánchez
+    - cuevas en Barbosa
+    - espeleología en Barbosa
+    - cueva cafetera
+    - cuántas cuevas hay
+    - explorar cuevas en Barbosa
+
+- intent: preguntar_chorro_diablo
+  examples: |
+    - Chorro del Diablo
+    - cascada en Barbosa
+    - La Chorrera Barbosa
+    - cascada mística Barbosa
+    - qué cascadas hay en Barbosa
+
+- intent: preguntar_festival_rio
+  examples: |
+    - Festival del Río Suárez
+    - festival del río
+    - cuándo es el festival de Barbosa
+    - festival de enero Barbosa
+    - kartismo Barbosa
+    - mountain bike festival
+    - eventos en Barbosa
+    - fiestas de Barbosa
+
+- intent: preguntar_velez
+  examples: |
+    - qué hay en Vélez
+    - qué visitar en Vélez
+    - Vélez Santander
+    - catedral de Vélez
+    - catedral atravesada
+    - cómo ir a Vélez
+    - que hacer en Vélez
+    - bocadillo de Vélez
+    - Festival de la Guabina
+    - festival del tiple
+    - música de Vélez
+    - folklore de Vélez
+
+- intent: preguntar_bocadillo
+  examples: |
+    - bocadillo veleño
+    - dónde comprar bocadillo
+    - fábrica de bocadillo
+    - bocadillo con queso
+    - dulce de guayaba
+    - fruti fresca Vélez
+    - Reinado del Bocadillo
+    - guayaba Vélez
+
+- intent: preguntar_moniquira
+  examples: |
+    - qué hay en Moniquirá
+    - Moniquirá Boyacá
+    - cómo ir a Moniquirá
+    - hoteles en Moniquirá
+    - spas en Moniquirá
+    - turismo de salud Moniquirá
+    - Hotel Palmeras de Luz
+    - Chiminigagua
+    - cascada La Honda Moniquirá
+    - jacuzzi cerca de Barbosa
+    - bienestar y relajación
+
+- intent: preguntar_florian
+  examples: |
+    - Florián Santander
+    - qué hay en Florián
+    - cómo ir a Florián
+    - Ventanas de Tisquizoque
+    - cueva de Tisquizoque
+    - cascada de Florián
+    - ciudad de las ventanas abiertas
+    - espeleología Florián
+    - cascada 300 metros
+
+- intent: preguntar_gambita
+  examples: |
+    - Gámbita Santander
+    - qué hay en Gámbita
+    - Manto de la Virgen
+    - cascada más alta
+    - La Humeadora Gámbita
+    - canyoning Gámbita
+    - cascada de 500 metros
+    - Cueva del Chocó
+    - Cañón de la Hondura
+    - agua roja cascada
+
+- intent: preguntar_suaita
+  examples: |
+    - Suaita Santander
+    - qué hay en Suaita
+    - Cascada de los Caballeros
+    - cascada 120 metros Suaita
+    - San José de Suaita
+    - museo textil Suaita
+    - primera fábrica Colombia
+    - torrentismo Suaita
+
+- intent: preguntar_puente_nacional
+  examples: |
+    - Puente Nacional
+    - qué hay en Puente Nacional
+    - El Balay
+    - plato típico Puente Nacional
+    - gallina criolla canasto
+    - plato en canasto
+
+- intent: preguntar_oiba
+  examples: |
+    - Oiba Santander
+    - qué hay en Oiba
+    - Oiba pueblito pesebre
+    - artesanías Oiba
+    - Caolín Oiba
+    - Templo San Miguel
+
+- intent: preguntar_gastronomia
+  examples: |
+    - qué comer en Barbosa
+    - gastronomía local
+    - restaurantes recomendados
+    - platos típicos
+    - piquete veleño
+    - piquete santandereano
+    - carne oreada
+    - cabrito
+    - pepitoria
+    - arepa de maíz
+    - Arepas donde Julia
+    - desayuno típico Barbosa
+    - caldito de carne
+    - food in Barbosa
+
+- intent: preguntar_hoteles
+  examples: |
+    - dónde hospedarse
+    - hoteles en Barbosa
+    - dónde dormir
+    - alojamiento disponible
+    - posadas en Barbosa
+    - hostales
+    - hotel boutique Barbosa
+    - Turrim Dei Hotel
+    - La Floresta de Cite
+    - where to stay
+
+- intent: preguntar_fauna
+  examples: |
+    - qué animales hay en la región
+    - aves en Barbosa
+    - avistamiento de aves
+    - birdwatching
+    - observación de aves
+    - ardillas en la región
+    - fauna silvestre
+
+- intent: preguntar_precio
+  examples: |
+    - cuánto cuesta
+    - tarifas de los tours
+    - valor del tour
+    - presupuesto para el viaje
+    - cuánto necesito para el viaje
+    - how much does it cost
+
+- intent: preguntar_guias
+  examples: |
+    - tienen guías
+    - guías turísticos
+    - guías certificados
+    - es seguro ir con guía
+    - necesito un guía para las cuevas
+    - guías para espeleología
+
+- intent: preguntar_temporada
+  examples: |
+    - cuándo es la mejor época para visitar
+    - mejor temporada
+    - en qué mes debo ir
+    - clima en Barbosa
+    - temperatura en Barbosa
+    - cuando viajar a Barbosa
+
+- intent: preguntar_plan_dias
+  examples: |
+    - qué hacer en un fin de semana
+    - plan para 2 días
+    - itinerario de 3 días
+    - cómo organizar mi viaje
+    - plan de fin de semana
+    - itinerario recomendado
+    - viaje de 4 días
+
+- intent: preguntar_familia
+  examples: |
+    - puedo ir con niños
+    - es apto para familias
+    - planes para niños
+    - viaje en familia
+    - qué hacer con la familia
+    - balneario con niños
+
+- intent: preguntar_aventura
+  examples: |
+    - qué deportes extremos hay
+    - aventura en la región
+    - canyoning
+    - torrentismo
+    - mountain bike en Barbosa
+    - senderismo de alta dificultad
+    - kartismo Barbosa
+    - kayak río Suárez
+    - tubing
+    - deportes en la región
+
+- intent: despedirse
+  examples: |
+    - adiós
+    - hasta luego
+    - chao
+    - nos vemos
+    - bye
+    - goodbye
+    - hasta pronto
+
+- intent: agradecer
+  examples: |
+    - gracias
+    - muchas gracias
+    - muy amable
+    - excelente información
+    - thank you
+    - muy útil
+    - perfecto
+    - genial
